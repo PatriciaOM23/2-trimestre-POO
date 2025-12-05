@@ -48,6 +48,11 @@ public class TareaSimple {
 		this.completado = completado;
 	}
 
+	public void calcularCompletado() {
+		if(this.completado) {
+			System.out.println();
+		}
+	}
 	public String getAsignatura() {
 		return asignatura;
 	}
