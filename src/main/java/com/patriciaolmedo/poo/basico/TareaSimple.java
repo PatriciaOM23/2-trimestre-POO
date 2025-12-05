@@ -39,6 +39,11 @@ public class TareaSimple {
 	public boolean isCompletado() {
 		return completado;
 	}
+	
+	public void cambiarEstado() {
+		this.completado = !completado; // LE INDICO QUE ES LO CONTRARIO
+	}
+	
 	public void setCompletado(boolean completado) {
 		this.completado = completado;
 	}
@@ -50,11 +55,6 @@ public class TareaSimple {
 	public void setAsignatura(String asignatura) {
 		this.asignatura = asignatura;
 	}
-	
-	public void cambiarEstado() {
-		this.completado = !completado; // LE INDICO QUE ES LO CONTRARIO
-	}
-	
 	
 	
 }
