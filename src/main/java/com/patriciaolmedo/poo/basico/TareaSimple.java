@@ -50,7 +50,9 @@ public class TareaSimple {
 
 	public void calcularCompletado() {
 		if(this.completado) {
-			System.out.println();
+			System.out.println("La tarea está completada");
+		} else {
+			System.out.println("La tarea no está completada");
 		}
 	}
 	public String getAsignatura() {
