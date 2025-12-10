@@ -2,7 +2,7 @@ package com.patriciaolmedo.poo.redsocial;
 
 import java.time.LocalDate;
 
-public class Publicacion {
+public class Posts {
 	private String content;
 	private LocalDate date;
 	private int numLikes;
@@ -22,5 +22,11 @@ public class Publicacion {
 	}
 	
 	
+//	public void showPost (String content, LocalDate date, int numLikes) {
+//		System.out.printf("Contenido: %s%nFecha: %s%nLikes: %d",content, date, numLikes);
+//		
+//	}
 
+	
 }
+
