@@ -1,7 +1,9 @@
 package com.patriciaolmedo.poo.redsocial;
 
 import java.util.ArrayList;
+
 import java.util.List;
+import java.util.Scanner;
 
 public class Profile {
 
@@ -10,14 +12,18 @@ public class Profile {
 	private String userBiography;
 	private String userCity;
 	private int followers;
-	private int posts;
+	private int numPosts;
 	private ProfileStatus profileStatus; // CAMBIAR
 	private boolean verifiedUser; // CAMBIAR
-	private List<Posts> dposts; 
-
+	private List<Post> postList; 
 	
-	public Profile() {
-		this.dposts = new ArrayList<Posts>();
+	public Profile(String username, String visibleName, String userBiography, String city) {
+		this.postList = new ArrayList<Post>();
+		this.username =  username;
+		this.visibleName = visibleName;
+		this.userBiography = userBiography;
+		this.userCity = city;
+		
 	}
 	
 	public void showInformation() {
@@ -26,7 +32,7 @@ public class Profile {
 		System.out.println(this.userBiography);
 		System.out.println(this.userCity);
 		System.out.println(this.followers);
-		System.out.println(this.posts);
+		System.out.println(this.numPosts);
 		System.out.println(this.profileStatus);
 		System.out.println(this.verifiedUser);
 	}
@@ -52,5 +58,22 @@ public class Profile {
 		return currentStatus;
 
 	}
-
+	
+	public void createPost(String content) {
+		// El arraylist lo hemos creado ya arriba
+		this.postList.add(new Post(content)); 
+		numPosts++;
+		
+	}
+	
+	public void showPosts() {
+		for(Post i : postList) {
+			i.showContent();
+			
+		
+		}
+	}
+	
+	
+	
 }
