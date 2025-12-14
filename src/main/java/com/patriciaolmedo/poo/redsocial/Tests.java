@@ -7,7 +7,7 @@ public class Tests {
 		System.out.print("PRUEBA CLASE PROFILE \n------------------------\n");
 
 		
-		Profile perfil1 = new Profile("Patri", "patri", "puta", "madrid");
+		Profile perfil1 = new Profile("Patri", "patri", "****", "madrid");
 		perfil1.createPost("Buenos dias");
 		perfil1.showPosts();
 		
@@ -16,7 +16,7 @@ public class Tests {
 	   System.out.print("PRUEBA CLASE POST \n------------------------\n");
 		
 		Post prueba1 = new Post("Me cago en to");
-		prueba1.giveLike();
+		prueba1.totalLikes();
 		prueba1.showContent();
 		
 	}
