@@ -14,10 +14,46 @@ public class Profile {
 	private int followers;
 	private int numPosts;
 	private ProfileStatus profileStatus; // CAMBIAR
-	private boolean currentStatus;
 	private boolean verifiedUser; // CAMBIAR
 	private List<Post> postList; 
 	
+	
+	
+	public Profile(String username, String visibleName, String userBiography, String userCity) {
+		super();
+		this.username = username;
+		this.visibleName = visibleName;
+		this.userBiography = userBiography;
+		this.userCity = userCity;
+		this.postList = new ArrayList <>();
+	}
+	
+	
+
+	public Profile() {
+		super();
+		this.postList = new ArrayList <>();
+	}
+
+
+
+	public Profile(String username, String visibleName, String userBiography, String userCity, int followers,
+			int numPosts, ProfileStatus profileStatus, boolean currentStatus, boolean verifiedUser,
+			List<Post> postList) {
+		super();
+		this.username = username;
+		this.visibleName = visibleName;
+		this.userBiography = userBiography;
+		this.userCity = userCity;
+		this.followers = followers;
+		this.numPosts = numPosts;
+		this.profileStatus = profileStatus;
+		this.verifiedUser = verifiedUser;
+		this.postList = postList;
+	}
+
+
+
 	public String getUsername() {
 		return username;
 	}
@@ -90,15 +126,9 @@ public class Profile {
 		this.postList = postList;
 	}
 
+
 	
-	public Profile(String username, String visibleName, String userBiography, String userCity) {
-		this.postList = new ArrayList<Post>();
-		this.username =  username;
-		this.visibleName = visibleName;
-		this.userBiography = userBiography;
-		this.userCity = userCity;
-		
-	}
+	
 	
 	
 	public void showInformation() {
@@ -111,6 +141,7 @@ public class Profile {
 		System.out.println("Estado perfil: " + this.profileStatus);
 		System.out.println("Usuario verificado: " + this.verifiedUser);
 	}
+
 
 	public void newFollower(int followers) {
 		this.followers += this.followers;

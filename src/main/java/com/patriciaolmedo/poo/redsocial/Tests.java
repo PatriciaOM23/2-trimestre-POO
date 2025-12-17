@@ -9,7 +9,7 @@ public class Tests {
 		
 		Profile perfil1 = new Profile("Patri", "patri", "hola", "madrid");
 		perfil1.createPost("Buenos dias");
-		perfil1.newFollower();
+		perfil1.newFollower(2124);
 		perfil1.createPost("hola buenas");
 		perfil1.showInformation();
 		System.out.println("\nposts: ------ \n ");
